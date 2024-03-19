@@ -9,7 +9,7 @@ RUN tar -xzvf /opt/apache-tomcat-8.5.99.tar.gz -C /opt/
 
 WORKDIR /opt/apache-tomcat-8.5.99/
 ADD https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar lib/mysql-connector.jar
-CP  student.war webapps/student.war
+COPY  student.war webapps/
 COPY context.xml conf/contex.xml
 
 
